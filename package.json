@@ -1,0 +1,19 @@
+{
+  "author": "David Aurelio <dev@david-aurelio.com>",
+  "name": "watch",
+  "description": "Watches files or directories for changes, executes a command or a JavaScript function, or serves a directory, triggering browser reload on file changes.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/davidaurelio/watchjs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidaurelio/watch.js.git"
+  },
+  "main": "lib/watch",
+  "bin": {"watch.js": "bin/watch.js"},
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {}
+}
