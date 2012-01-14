@@ -1,4 +1,13 @@
 #!/usr/bin/env node
-require('watch')(process.argv.slice(2), function() {
-  process.exit(0);
-});
+var options = require('nomnom')
+  .option('command', {
+    abbr: 'c',
+    metavar: 'COMMAND',
+    help: 'Executes COMMAND on file changes. Disables exit on change.'
+  })
+
+  .parse();
+
+var exitOnChange = !options.command
+
+require('watch')(options._, options, exitOnChange ? process.exit : null);
