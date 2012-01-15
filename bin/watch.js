@@ -21,6 +21,20 @@ var options = require('nomnom')
     help: 'Executes COMMAND on file changes. Disables exit on file changes.'
   })
 
+  .option('serve', {
+    type: 'string',
+    abbr: 's',
+    metavar: 'PATH',
+    help: 'Serve a directory via HTTP, triggering reload on file changes.'
+  })
+
+  .option('port', {
+    type: 'string',
+    abbr: 'p',
+    metavar: 'PORT',
+    help: 'Change the HTTP port to use when using -s / --serve'
+  })
+
   .parse();
 
 var exitOnChange = !options.command
