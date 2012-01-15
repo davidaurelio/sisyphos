@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 var options = require('nomnom')
 
+  .printer(function(message) {
+    process.stderr.write(message + '\n');
+    process.exit(1); // make sure `while` does not continue
+  })
+
   .option('path', {
     position: 0,
     list: true,
