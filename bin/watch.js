@@ -8,16 +8,17 @@ var options = require('nomnom')
 
   .option('path', {
     position: 0,
+    type: 'string',
     list: true,
     required: true,
-    help: 'The path(s) to watch. At least one path is required.'
+    help: 'The path(s) to watch for changes. At least one path is required.'
   })
 
   .option('command', {
     type: 'string',
     abbr: 'c',
     metavar: 'COMMAND',
-    help: 'Executes COMMAND on file changes. Disables exit on change.'
+    help: 'Executes COMMAND on file changes. Disables exit on file changes.'
   })
 
   .parse();
