@@ -1,15 +1,15 @@
 {
   "author": "David Aurelio <dev@david-aurelio.com>",
-  "name": "watch",
+  "name": "sisyphos",
   "description": "Watches files or directories for changes, executes a command or a JavaScript function, or serves a directory, triggering browser reload on file changes.",
   "version": "0.0.1",
-  "homepage": "http://github.com/davidaurelio/watchjs",
+  "homepage": "http://github.com/davidaurelio/sisyphos",
   "repository": {
     "type": "git",
-    "url": "git://github.com/davidaurelio/watch.js.git"
+    "url": "git://github.com/davidaurelio/sisyphos.git"
   },
-  "main": "lib/watch",
-  "bin": {"watch.js": "bin/watch.js"},
+  "main": "lib/main",
+  "bin": {"sisyphos": "bin/sisyphos"},
   "engines": {
     "node": ">= 0.6.0"
   },

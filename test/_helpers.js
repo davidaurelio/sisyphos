@@ -2,14 +2,16 @@ var fs = require('fs');
 var path = require('path');
 var spawn = require('child_process').spawn;
 
-var BIN = path.join(__dirname, '..', 'bin', 'watch.js');
+var BIN = path.join(__dirname, '..', 'bin', 'sisyphos');
 var TMPFILE = path.join(__dirname, 'tmp');
 
 exports.runBin = function() {
-  return spawn(BIN, [].call(arguments));
+  var args = [].slice.call(arguments);
+  console.warn('Running %s %s', BIN, args.join(' '));
+  return spawn(BIN, args);
 };
 
-expors.triggerFsChange = function() {
+exports.triggerFSChange = function() {
   if (path.exists(TMPFILE)) {
     fs.unlinkSync(TMPFILE);
   }

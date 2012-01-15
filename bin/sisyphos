@@ -39,4 +39,4 @@ var options = require('nomnom')
 
 var exitOnChange = !options.command
 
-require('watch')(options._, options, exitOnChange ? process.exit : null);
+require('sisyphos')(options._, options, exitOnChange ? process.exit : null);
