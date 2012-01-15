@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var options = require('nomnom')
   .option('command', {
+    type: 'string',
     abbr: 'c',
     metavar: 'COMMAND',
     help: 'Executes COMMAND on file changes. Disables exit on change.'
